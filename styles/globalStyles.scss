@@ -1,0 +1,23 @@
+$base-color: #02b0ac;
+$text-color: #fff;
+
+%input {
+    box-sizing: border-box;
+    padding: 12px;
+    border-radius: 20px;
+    border: none;
+    width: 250px;
+    border: 2px solid lightgray;
+    &:focus {
+        outline: none;
+    }
+}
+
+%icon {
+    margin-right: 10px;
+    background-color: white;
+    padding: 15px;
+    font-size: 1.6rem;
+    border-radius: 50%;
+    color: $base-color;
+}

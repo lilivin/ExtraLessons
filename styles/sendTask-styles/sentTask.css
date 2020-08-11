@@ -1,0 +1,122 @@
+.form .formPart__input {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 12px;
+  border-radius: 20px;
+  border: none;
+  width: 250px;
+  border: 2px solid lightgray;
+}
+
+.form .formPart__input:focus {
+  outline: none;
+}
+
+.form .formPart__icon {
+  margin-right: 10px;
+  background-color: white;
+  padding: 15px;
+  font-size: 1.6rem;
+  border-radius: 50%;
+  color: #02b0ac;
+}
+
+body {
+  background-color: #02b0ac;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.mainSection {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 20%;
+  min-width: 300px;
+  height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.form__header {
+  color: #fff;
+  border-bottom: 2px solid white;
+  padding-bottom: 5px;
+  width: 50%;
+  text-align: center;
+}
+
+.form__register {
+  color: #fff;
+  font-size: .8rem;
+}
+
+.form__register a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.form .errorList {
+  margin: 0;
+  padding: 8px 30px;
+  border-radius: 20px;
+  background-color: white;
+  font-weight: bold;
+  list-style: none;
+  color: #02b0ac;
+}
+
+.form .errorList__error {
+  padding: 0;
+  margin: 0;
+}
+
+.form .formPart {
+  margin: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form .formPart__button {
+  width: 250px;
+  padding: 12px;
+  border-radius: 20px;
+  border: none;
+  text-transform: uppercase;
+  color: #02b0ac;
+  font-weight: bold;
+  background-color: white;
+  cursor: pointer;
+}
+
+.form .formPart__button:focus {
+  outline: none;
+}
+/*# sourceMappingURL=sentTask.css.map */
