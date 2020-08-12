@@ -59,18 +59,7 @@ body {
             @extend %input;
         }
         &__button{
-            width: 250px;
-            padding: 12px;
-            border-radius: 20px;
-            border: none;
-            text-transform: uppercase;
-            color: $base-color;
-            font-weight: bold;
-            background-color: white;
-            cursor: pointer;
-            &:focus {
-                outline: none;
-            }
+            @extend %button;
         }
     }
 }

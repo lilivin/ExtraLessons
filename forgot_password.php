@@ -15,7 +15,7 @@
 
         <h2 class="form__header">Reset hasła</h2>
 
-        <p>Wprowadz adres email, abyśmy mogli wysłać na niego email do resetu hasła</p>
+        <p class="alert">Wprowadz adres email, abyśmy mogli wysłać na niego email do resetu hasła.</p>
 
         <?php if(count($errors) > 0): ?>
             <ul class="errorList">

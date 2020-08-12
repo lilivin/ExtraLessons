@@ -15,7 +15,7 @@
           align-items: center;
   font-size: 1.2rem;
   height: 100px;
-  border-bottom: 2px solid white;
+  border-bottom: 3px solid white;
   max-width: 1280px;
 }
 
@@ -29,23 +29,19 @@
 
 .navigation__element {
   text-decoration: none;
-  padding: 10px 25px;
+  padding: 10px 5px;
   margin: 0 5px;
   color: #fff;
   font-weight: bold;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-size: .7rem;
 }
 
-@media (max-width: 520px) {
+@media (min-width: 520px) {
   .navigation__element {
-    padding: 10px 5px;
-  }
-}
-
-@media (max-width: 400px) {
-  .navigation__element {
-    font-size: .7rem;
+    font-size: 1rem;
+    padding: 10px 25px;
   }
 }
 
@@ -63,13 +59,8 @@
 
 @media (max-width: 520px) {
   .navigation__logOut {
-    padding: 10px 5px;
-  }
-}
-
-@media (max-width: 400px) {
-  .navigation__logOut {
     font-size: .7rem;
+    padding: 10px 5px;
   }
 }
 

@@ -1,6 +1,12 @@
 $base-color: #02b0ac;
 $text-color: #fff;
 
+$extraSmall: 520px;
+$small: 800px;
+$medium: 1024px;
+$large: 1280px;
+
+
 %input {
     box-sizing: border-box;
     padding: 12px;
@@ -20,4 +26,28 @@ $text-color: #fff;
     font-size: 1.6rem;
     border-radius: 50%;
     color: $base-color;
+}
+
+%button {
+    width: 250px;
+    padding: 12px;
+    border-radius: 20px;
+    border: none;
+    text-transform: uppercase;
+    color: $base-color;
+    font-weight: bold;
+    background-color: white;
+    cursor: pointer;
+    &:focus {
+        outline: none;
+    }
+}
+
+%alert {
+    background-color: $text-color;
+    color: $base-color;
+    font-weight: bold;
+    padding: 5px 10px;
+    text-align: center;
+    border-radius: 20px;
 }

@@ -23,6 +23,10 @@
             </ul>
         <?php endif; ?>
 
+        <?php if(isset($_GET['user'])): ?>
+            <p class="alert">Wysłaliśmy na Twój adres email link umożliwiający zmiane hasła!</p>
+        <?php endif; ?>
+
         <div class="formPart">
             <i class="fas fa-user-tie formPart__icon"></i>
             <input class="formPart__input" type="text" name="username" placeholder="Wpisz login..." value="<?php echo $username; ?>"/>
@@ -42,7 +46,7 @@
             Jeszcze nie uczysz się z nami? <a href='register.php'>Zarejestruj się!</a>
         </p>
         <div>
-            <a href="forgot_password.php">Zapomniałeś hasła?</a>
+            <a class="form__forgotPassword" href="forgot_password.php">Zapomniałeś hasła?</a>
         </div>
     </form>
     

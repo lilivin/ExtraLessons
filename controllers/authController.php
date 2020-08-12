@@ -192,7 +192,7 @@ if(isset($_POST['forgot-password'])) {
         $user = mysqli_fetch_assoc($result);
         $token = $user['token'];
         sendPasswordResetLink($email, $token);
-        header('location: password_message.php');
+        header('location: login.php?user=true');
         exit(0);
     }
 }

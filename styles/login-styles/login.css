@@ -21,6 +21,31 @@
   color: #02b0ac;
 }
 
+.form .formPart__button {
+  width: 250px;
+  padding: 12px;
+  border-radius: 20px;
+  border: none;
+  text-transform: uppercase;
+  color: #02b0ac;
+  font-weight: bold;
+  background-color: white;
+  cursor: pointer;
+}
+
+.form .formPart__button:focus {
+  outline: none;
+}
+
+.alert {
+  background-color: #fff;
+  color: #02b0ac;
+  font-weight: bold;
+  padding: 5px 10px;
+  text-align: center;
+  border-radius: 20px;
+}
+
 body {
   background-color: #02b0ac;
   margin: 0;
@@ -54,7 +79,7 @@ body {
 
 .form__header {
   color: #fff;
-  border-bottom: 2px solid white;
+  border-bottom: 3px solid white;
   padding-bottom: 5px;
   width: 50%;
   text-align: center;
@@ -66,8 +91,14 @@ body {
 }
 
 .form__register a {
-  color: white;
+  color: #fff;
   text-decoration: none;
+  font-weight: bold;
+}
+
+.form__forgotPassword {
+  text-decoration: none;
+  color: #fff;
   font-weight: bold;
 }
 
@@ -75,7 +106,7 @@ body {
   margin: 0;
   padding: 8px 30px;
   border-radius: 20px;
-  background-color: white;
+  background-color: #fff;
   font-weight: bold;
   list-style: none;
   color: #02b0ac;
@@ -94,21 +125,5 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.form .formPart__button {
-  width: 250px;
-  padding: 12px;
-  border-radius: 20px;
-  border: none;
-  text-transform: uppercase;
-  color: #02b0ac;
-  font-weight: bold;
-  background-color: white;
-  cursor: pointer;
-}
-
-.form .formPart__button:focus {
-  outline: none;
 }
 /*# sourceMappingURL=login.css.map */

@@ -7,6 +7,10 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+.alert {
+    @extend %alert;
+}
+
 .form {
     position: absolute;
     top: 50%;
@@ -21,7 +25,7 @@ body {
     justify-content: center;
     &__header{
         color: $text-color;
-        border-bottom: 2px solid white;
+        border-bottom: 3px solid white;
         padding-bottom: 5px;
         width: 50%;
         text-align: center;
@@ -30,16 +34,21 @@ body {
         color: $text-color;
         font-size: .8rem;
         a{
-            color: white;
+            color: $text-color;
             text-decoration: none;
             font-weight: bold;
         }
+    }
+    &__forgotPassword{
+        text-decoration: none;
+        color: $text-color;
+        font-weight: bold;
     }
     .errorList{
         margin: 0;
         padding: 8px 30px;
         border-radius: 20px;
-        background-color: white;
+        background-color: $text-color;
         font-weight: bold;
         list-style: none;
         color: $base-color;
@@ -59,18 +68,7 @@ body {
             @extend %input;
         }
         &__button{
-            width: 250px;
-            padding: 12px;
-            border-radius: 20px;
-            border: none;
-            text-transform: uppercase;
-            color: $base-color;
-            font-weight: bold;
-            background-color: white;
-            cursor: pointer;
-            &:focus {
-                outline: none;
-            }
+            @extend %button;
         }
     }
 }

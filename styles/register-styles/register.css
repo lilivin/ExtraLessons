@@ -21,6 +21,22 @@
   color: #02b0ac;
 }
 
+.form .formPart__button {
+  width: 250px;
+  padding: 12px;
+  border-radius: 20px;
+  border: none;
+  text-transform: uppercase;
+  color: #02b0ac;
+  font-weight: bold;
+  background-color: white;
+  cursor: pointer;
+}
+
+.form .formPart__button:focus {
+  outline: none;
+}
+
 body {
   background-color: #02b0ac;
   margin: 0;
@@ -94,21 +110,5 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.form .formPart__button {
-  width: 250px;
-  padding: 12px;
-  border-radius: 20px;
-  border: none;
-  text-transform: uppercase;
-  color: #02b0ac;
-  font-weight: bold;
-  background-color: white;
-  cursor: pointer;
-}
-
-.form .formPart__button:focus {
-  outline: none;
 }
 /*# sourceMappingURL=register.css.map */
