@@ -26,12 +26,12 @@
             
         <div class="formPart">
             <i class="fas fa-unlock formPart__icon"></i>
-            <input class="formPart__input" type="password" name="password" placeholder="Wpisz hasło..."/>
+            <input class="formPart__input" type="password" name="passwordReset" placeholder="Wpisz hasło..."/>
         </div>
 
         <div class="formPart">
             <i class="fas fa-unlock formPart__icon"></i>
-            <input class="formPart__input" type="password" name="passwordConf" placeholder="Wpisz hasło..."/>
+            <input class="formPart__input" type="password" name="passwordResetConf" placeholder="Wpisz hasło..."/>
         </div>
             
         <div class="formPart">

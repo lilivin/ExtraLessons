@@ -187,9 +187,10 @@ if(isset($_POST['forgot-password'])) {
     }
 
     if (count($errors) == 0) {
-        $sql = "SELECT * FROM users WHERE email='$email' LIMIT 1";
-        $result = mysqli_query($conn, $sql);
-        $user = mysqli_fetch_assoc($result);
+        $sql = "SELECT * FROM users WHERE email=? LIMIT 1";
+        $result = $conn-> prepare($sql);
+        $result->execute(array($email));
+        $user = $result->fetch(PDO::FETCH_ASSOC);
         $token = $user['token'];
         sendPasswordResetLink($email, $token);
         header('location: login.php?user=true');
@@ -198,18 +199,24 @@ if(isset($_POST['forgot-password'])) {
 }
 
 if (isset($_POST['reset-password-btn'])) {
-    $password = $_POST['password'];
-    $passwordConf = $_POST['passwordConf'];
+    $passwordReset = trim(htmlspecialchars($_POST['passwordReset']));
+    $passwordResetConf = trim(htmlspecialchars($_POST['passwordResetConf']));
+    
 
-    if(empty($password) || empty($passwordConf)){
+    if(empty($passwordReset) || empty($passwordResetConf)){
         $errors['password'] = "Hasło jest wymagane!";
     }
 
-    if($password !== $passwordConf) {
+    if($passwordReset !== $passwordResetConf) {
         $errors['password'] = 'Hasła nie są jednakowe!';
     }
 
-    $password = password_hash($password, PASSWORD_DEFAULT);
+    if(strlen($_POST['passwordReset']) < 7 || strlen($_POST['passwordReset']) > 25) {
+        $errors['password'] = 'Hasło musi mieć od 7 do 25 znaków, bez znaków specjalnych!';
+    }
+
+
+    $password = password_hash($passwordReset, PASSWORD_DEFAULT);
     $email = $_SESSION['email'];
 
     if (count($errors) == 0) {
@@ -225,10 +232,11 @@ if (isset($_POST['reset-password-btn'])) {
 
 function resetPassword($token) {
     global $conn;
-    $sql = "SELECT * FROM users WHERE token='$token' LIMIT 1";
-    $result = mysqli_query($conn, $sql);
-    $user = mysqli_fetch_assoc($result);
+    $sql = "SELECT * FROM users WHERE token=? LIMIT 1";
+    $result = $conn-> prepare($sql);
+    $result->execute(array($token));
+    $user = $result->fetch(PDO::FETCH_ASSOC);
     $_SESSION['email'] = $user['email'];
-    header('location: reset_password.php');
+    header("location: reset_password.php");
     exit(0);
 }
