@@ -129,6 +129,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -159,6 +161,11 @@ body {
 
 .lessons .lesson__data {
   font-size: .7rem;
+}
+
+.lessons .lesson__student {
+  width: 100%;
+  font-size: .6rem;
 }
 
 .toDoItems {
@@ -217,7 +224,19 @@ body {
 }
 
 .toDoItem__date {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
   padding: 5px 10px;
+  font-size: .7rem;
+}
+
+.toDoItem__student {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-column-align: right;
+      justify-self: right;
   font-size: .7rem;
 }
 

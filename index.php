@@ -76,6 +76,7 @@
                     </div>
                     <?php
                         $todos = $conn->query("SELECT * FROM tasks ORDER BY id DESC");
+                        $result = $conn-> prepare("SELECT * FROM users WHERE id=? LIMIT 1");
                     ?>
                     <div class="toDoItems">
                         <?php while($todo = $todos->fetch(PDO::FETCH_ASSOC)) { ?>
@@ -84,6 +85,14 @@
                                         <h2 class="toDoItem__title"><?php echo $todo['title'] ?></h2>
                                         <i id="<?php echo $todo['id']; ?>" class="far fa-trash-alt remove"></i>
                                         <p class="toDoItem__date">Stworzono: <?php echo $todo['data_time'] ?> </p>  
+                                        <?php 
+                                        if($_SESSION['id']==1){
+                                            $result->execute(array($todo['id_user']));
+                                            $user = $result->fetch(PDO::FETCH_ASSOC);
+                                            $student = $user['username'];
+                                            echo "<p class='toDoItem__student'>Uczeń: $student</p>";
+                                        }
+                                        ?>
                                 </div>
                             <?php endif ?>
                         <?php } ?>
@@ -99,7 +108,16 @@
                             <div class="lesson">
                                 <h1 class="lesson__title"><?php echo $topic['title']; ?></h1>
                                 <p class="lesson__data"><?php echo $topic['data']; ?></p>
+                                <?php 
+                                if($_SESSION['id']==1){
+                                    $result->execute(array($topic['id_user']));
+                                    $user = $result->fetch(PDO::FETCH_ASSOC);
+                                    $student = $user['username'];
+                                    echo "<p class='lesson__student'>Uczeń: $student</p>";
+                                }
+                                ?>
                             </div>
+                            
                         <?php endif ?>
                     <?php } ?>
                 </div>

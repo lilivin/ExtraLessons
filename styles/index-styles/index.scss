@@ -96,6 +96,7 @@ body {
         width: 90%;
         min-width: 300px;
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         border-bottom: 3px solid white;
         padding: 15px 0;
@@ -114,6 +115,10 @@ body {
         }
         &__data{
             font-size: .7rem;
+        }
+        &__student {
+            width: 100%;
+            font-size: .6rem;
         }
     }
 }
@@ -153,7 +158,13 @@ body {
         }
     }
     &__date {
+        grid-column: 1/2;
         padding: 5px 10px;
+        font-size: .7rem;
+    }
+    &__student{
+        grid-column: 2/3;
+        justify-self: right;
         font-size: .7rem;
     }
 }
